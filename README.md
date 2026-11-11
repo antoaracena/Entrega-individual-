@@ -178,29 +178,7 @@ El juego le responde al Arduino con una letra para controlar las luces:
 
 ---
 
-## 🛠️ Proceso de fabricación
 
-> 📸 Agrega tus fotos en la carpeta `fotos/` y reemplaza los nombres de archivo de abajo.
-
-### 1. Manufactura de la carcasa
-<!-- Fotos de la impresión 3D, lijado, terminaciones -->
-| | |
-|---|---|
-| ![](fotos/manufactura/01.jpg) | ![](fotos/manufactura/02.jpg) |
-
-### 2. Soldadura del shield
-<!-- Fotos de la PCB perforada, headers, soldaduras -->
-| | |
-|---|---|
-| ![](fotos/soldadura/01.jpg) | ![](fotos/soldadura/02.jpg) |
-
-### 3. Ensamble interno final
-<!-- Fotos del interior: Arduino + shield montados, cableado fijado -->
-| | |
-|---|---|
-| ![](fotos/ensamble/01.jpg) | ![](fotos/ensamble/02.jpg) |
-
----
 
 ## 📁 Estructura del repositorio
 
@@ -232,17 +210,4 @@ sunset-blocks/
 
 ---
 
-## ✅ Cumplimiento de la pauta
 
-- [x] **Input discreto:** botón arcade (`D2`).
-- [x] **Input continuo:** slider (`A0`) y perilla (`A1`).
-- [x] **Shield a medida** en PCB perforada con headers; el Arduino se desmonta sin desoldar.
-- [x] **Sin protoboard** en la entrega final.
-- [x] **Electrónica contenida** en la caja, con soportes y tapa atornillada.
-- [x] **Comunicación serial** estable: 50 lecturas por segundo, con promedio y antirrebote.
-- [x] **Dashboard web** que muestra en tiempo real el estado del botón y el nivel de los faders.
-- [x] **Documentación:** video, diagrama esquemático y fotos del proceso.
-
----
-
-<p align="center"><sub>Hecho con 🌅 en la UAI · 2026</sub></p>
