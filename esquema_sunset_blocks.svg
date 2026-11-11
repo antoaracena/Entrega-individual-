@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1720 1010" width="1720" height="1010" font-family="Helvetica, Arial, sans-serif">
+<rect width="1720" height="1010" fill="#ffffff"/>
+<text x="40" y="52" font-size="28" fill="#1d1b2e" text-anchor="start" font-weight="800" >SUNSET BLOCKS · Diagrama esquemático del shield</text>
+<text x="40" y="80" font-size="15" fill="#6b6880" text-anchor="start" font-weight="400" >Controlador del block puzzle · Arduino UNO + shield en PCB perforada · comunicación serial USB a 115200 baudios</text>
+<rect x="318" y="112" width="482" height="846" rx="14" fill="#f3effc" stroke="#7b4fd6" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="338" y="138" font-size="15" fill="#7b4fd6" text-anchor="start" font-weight="800" >SHIELD · PCB PERFORADA SOLDADA</text>
+<text x="338" y="157" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >Se monta sobre el Arduino con headers macho (J1–J4)</text>
+<rect x="830" y="112" width="390" height="846" rx="14" fill="#fdf3f5" stroke="#e0607e" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="850" y="138" font-size="15" fill="#e0607e" text-anchor="start" font-weight="800" >COMPONENTES EN LA TAPA</text>
+<text x="850" y="157" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >Se conectan al shield con conectores J5–J9</text>
+<rect x="40" y="112" width="240" height="846" rx="12" fill="#1f6f8b" stroke="#1d1b2e" stroke-width="2.2"/>
+<text x="160" y="545" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="800" transform="rotate(-90 160 545)">ARDUINO UNO</text>
+<text x="205" y="545" font-size="14" fill="#cfe9f2" text-anchor="middle" font-weight="400" transform="rotate(-90 205 545)">USB → PC (Serial)</text>
+<rect x="262" y="194" width="36" height="22" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="1.6"/>
+<text x="254" y="210" font-size="15" fill="#ffffff" text-anchor="end" font-weight="700" >5V</text>
+<line x1="298" y1="205" x2="318" y2="205" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="262" y="239" width="36" height="22" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="1.6"/>
+<text x="254" y="255" font-size="15" fill="#ffffff" text-anchor="end" font-weight="700" >GND</text>
+<line x1="298" y1="250" x2="318" y2="250" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="262" y="319" width="36" height="22" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="1.6"/>
+<text x="254" y="335" font-size="15" fill="#ffffff" text-anchor="end" font-weight="700" >A0</text>
+<line x1="298" y1="330" x2="318" y2="330" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="262" y="479" width="36" height="22" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="1.6"/>
+<text x="254" y="495" font-size="15" fill="#ffffff" text-anchor="end" font-weight="700" >A1</text>
+<line x1="298" y1="490" x2="318" y2="490" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="262" y="629" width="36" height="22" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="1.6"/>
+<text x="254" y="645" font-size="15" fill="#ffffff" text-anchor="end" font-weight="700" >D2</text>
+<line x1="298" y1="640" x2="318" y2="640" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="262" y="749" width="36" height="22" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="1.6"/>
+<text x="254" y="765" font-size="15" fill="#ffffff" text-anchor="end" font-weight="700" >D6 ~</text>
+<line x1="298" y1="760" x2="318" y2="760" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="262" y="869" width="36" height="22" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="1.6"/>
+<text x="254" y="885" font-size="15" fill="#ffffff" text-anchor="end" font-weight="700" >D9 ~</text>
+<line x1="298" y1="880" x2="318" y2="880" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="322" y="185" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="203" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="221" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="239" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="257" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="275" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="293" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="311" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="329" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="347" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="365" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="383" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="401" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="419" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="437" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="455" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="473" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="491" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="509" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="527" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="545" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="563" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="581" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="599" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="617" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="635" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="653" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="671" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="689" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="707" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="725" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="743" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="761" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="779" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="797" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="815" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="833" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="851" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="869" width="10" height="10" fill="#2b2b2b"/>
+<rect x="322" y="887" width="10" height="10" fill="#2b2b2b"/>
+<line x1="318" y1="205" x2="420" y2="205" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="420" y1="205" x2="420" y2="191" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="410" y1="191" x2="430" y2="191" stroke="#1d1b2e" stroke-width="2.6" stroke-linecap="round"/>
+<text x="420" y="184" font-size="13" fill="#7b4fd6" text-anchor="middle" font-weight="700" >+5V</text>
+<line x1="318" y1="250" x2="420" y2="250" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="420" y1="250" x2="420" y2="262" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="407" y1="262" x2="433" y2="262" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="411.5" y1="267" x2="428.5" y2="267" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="416" y1="272" x2="424" y2="272" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="318" y1="330" x2="788" y2="330" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="318" cy="330" r="0" fill="#1d1b2e"/>
+<line x1="700" y1="290" x2="788" y2="290" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="700" y1="290" x2="700" y2="276" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="690" y1="276" x2="710" y2="276" stroke="#1d1b2e" stroke-width="2.6" stroke-linecap="round"/>
+<text x="700" y="269" font-size="13" fill="#7b4fd6" text-anchor="middle" font-weight="700" >+5V</text>
+<line x1="700" y1="370" x2="788" y2="370" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="700" y1="370" x2="700" y2="382" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="687" y1="382" x2="713" y2="382" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="691.5" y1="387" x2="708.5" y2="387" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="696" y1="392" x2="704" y2="392" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="788" y="276" width="24" height="108" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="2"/>
+<circle cx="800" cy="290" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="294" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<circle cx="800" cy="330" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="334" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<circle cx="800" cy="370" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="374" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<text x="800" y="268" font-size="13" fill="#1d1b2e" text-anchor="middle" font-weight="800" paint-order="stroke" stroke="#ffffff" stroke-width="5">J5</text>
+<line x1="812" y1="290" x2="960" y2="290" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="812" y1="370" x2="960" y2="370" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="960" y1="290" x2="960" y2="306" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="960" y1="354" x2="960" y2="370" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<polyline points="960,306 952,310 968,318 952,326 968,334 952,342 968,350 960,354" fill="none" stroke="#1d1b2e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="812" y1="330" x2="947" y2="330" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<polygon points="947,330 937,324 937,336" fill="#1d1b2e" stroke="#1d1b2e" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="990" y="316" font-size="15" fill="#1d1b2e" text-anchor="start" font-weight="700" >RV1 · Slider 10 kΩ</text>
+<text x="990" y="336" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >MOVER la pieza</text>
+<text x="990" y="354" font-size="12" fill="#6b6880" text-anchor="start" font-weight="400" >extremos a 5V y GND · cursor → A0</text>
+<text x="470" y="322" font-size="12" fill="#6b6880" text-anchor="middle" font-weight="400" >A0 · señal 0–1023</text>
+<line x1="318" y1="490" x2="788" y2="490" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="700" y1="450" x2="788" y2="450" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="700" y1="450" x2="700" y2="436" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="690" y1="436" x2="710" y2="436" stroke="#1d1b2e" stroke-width="2.6" stroke-linecap="round"/>
+<text x="700" y="429" font-size="13" fill="#7b4fd6" text-anchor="middle" font-weight="700" >+5V</text>
+<line x1="700" y1="530" x2="788" y2="530" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="700" y1="530" x2="700" y2="542" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="687" y1="542" x2="713" y2="542" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="691.5" y1="547" x2="708.5" y2="547" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="696" y1="552" x2="704" y2="552" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="788" y="436" width="24" height="108" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="2"/>
+<circle cx="800" cy="450" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="454" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<circle cx="800" cy="490" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="494" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<circle cx="800" cy="530" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="534" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<text x="800" y="428" font-size="13" fill="#1d1b2e" text-anchor="middle" font-weight="800" paint-order="stroke" stroke="#ffffff" stroke-width="5">J6</text>
+<line x1="812" y1="450" x2="960" y2="450" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="812" y1="530" x2="960" y2="530" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="960" y1="450" x2="960" y2="466" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="960" y1="514" x2="960" y2="530" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<polyline points="960,466 952,470 968,478 952,486 968,494 952,502 968,510 960,514" fill="none" stroke="#1d1b2e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="812" y1="490" x2="947" y2="490" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<polygon points="947,490 937,484 937,496" fill="#1d1b2e" stroke="#1d1b2e" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="990" y="476" font-size="15" fill="#1d1b2e" text-anchor="start" font-weight="700" >RV2 · Perilla 10 kΩ</text>
+<text x="990" y="496" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >GIRAR la pieza</text>
+<text x="990" y="514" font-size="12" fill="#6b6880" text-anchor="start" font-weight="400" >pata central → A1</text>
+<text x="470" y="482" font-size="12" fill="#6b6880" text-anchor="middle" font-weight="400" >A1 · señal 0–1023</text>
+<line x1="318" y1="640" x2="788" y2="640" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="700" y1="690" x2="788" y2="690" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="700" y1="690" x2="700" y2="702" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="687" y1="702" x2="713" y2="702" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="691.5" y1="707" x2="708.5" y2="707" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="696" y1="712" x2="704" y2="712" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="788" y="626" width="24" height="78" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="2"/>
+<circle cx="800" cy="640" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="644" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<circle cx="800" cy="690" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="694" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<text x="800" y="618" font-size="13" fill="#1d1b2e" text-anchor="middle" font-weight="800" paint-order="stroke" stroke="#ffffff" stroke-width="5">J7</text>
+<line x1="812" y1="640" x2="920" y2="640" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="812" y1="690" x2="960" y2="690" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="920" y1="640" x2="960" y2="640" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="960" y1="640" x2="960" y2="652" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="960" y1="678" x2="960" y2="690" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="960" cy="655" r="3.5" fill="#fff" stroke="#1d1b2e" stroke-width="2"/>
+<circle cx="960" cy="675" r="3.5" fill="#fff" stroke="#1d1b2e" stroke-width="2"/>
+<line x1="946" y1="649" x2="946" y2="681" stroke="#1d1b2e" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="946" y1="665" x2="932" y2="665" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="932" y1="657" x2="932" y2="673" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<text x="990" y="660" font-size="15" fill="#1d1b2e" text-anchor="start" font-weight="700" >SW1 · Botón arcade 25 mm</text>
+<text x="990" y="680" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >CAER (presionado = LOW)</text>
+<text x="470" y="632" font-size="12" fill="#6b6880" text-anchor="middle" font-weight="400" >D2 · INPUT_PULLUP interno (sin resistencia)</text>
+<line x1="318" y1="760" x2="526.0" y2="760" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="580.0" y1="760" x2="788" y2="760" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<polyline points="526.0,760 530.5,752 539.5,768 548.5,752 557.5,768 566.5,752 575.5,768 580.0,760" fill="none" stroke="#1d1b2e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="553.0" y="744" font-size="14" fill="#1d1b2e" text-anchor="middle" font-weight="700" >R1</text>
+<text x="553.0" y="787" font-size="13" fill="#6b6880" text-anchor="middle" font-weight="400" >220 Ω</text>
+<line x1="700" y1="810" x2="788" y2="810" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="700" y1="810" x2="700" y2="822" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="687" y1="822" x2="713" y2="822" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="691.5" y1="827" x2="708.5" y2="827" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="696" y1="832" x2="704" y2="832" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="788" y="746" width="24" height="78" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="2"/>
+<circle cx="800" cy="760" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="764" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<circle cx="800" cy="810" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="814" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<text x="800" y="738" font-size="13" fill="#1d1b2e" text-anchor="middle" font-weight="800" paint-order="stroke" stroke="#ffffff" stroke-width="5">J8</text>
+<line x1="812" y1="760" x2="960" y2="760" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="812" y1="810" x2="960" y2="810" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="960" y1="760" x2="960" y2="775.0" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="960" y1="795.0" x2="960" y2="810" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<polygon points="949,775.0 971,775.0 960,794.0" fill="#ffd166" stroke="#1d1b2e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="948" y1="795.0" x2="972" y2="795.0" stroke="#1d1b2e" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="976" y1="781.0" x2="989" y2="772.0" stroke="#1d1b2e" stroke-width="1.6" stroke-linecap="round"/>
+<polygon points="989,772.0 982,773.0 987,778.0" fill="#1d1b2e" stroke="#1d1b2e" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="976" y1="791.0" x2="989" y2="782.0" stroke="#1d1b2e" stroke-width="1.6" stroke-linecap="round"/>
+<polygon points="989,782.0 982,783.0 987,788.0" fill="#1d1b2e" stroke="#1d1b2e" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1000" y="780" font-size="15" fill="#1d1b2e" text-anchor="start" font-weight="700" >LED1 · Sol 5 mm</text>
+<text x="1000" y="800" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >detrás del difusor (PWM)</text>
+<line x1="318" y1="880" x2="526.0" y2="880" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="580.0" y1="880" x2="788" y2="880" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<polyline points="526.0,880 530.5,872 539.5,888 548.5,872 557.5,888 566.5,872 575.5,888 580.0,880" fill="none" stroke="#1d1b2e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="553.0" y="864" font-size="14" fill="#1d1b2e" text-anchor="middle" font-weight="700" >R2</text>
+<text x="553.0" y="907" font-size="13" fill="#6b6880" text-anchor="middle" font-weight="400" >220 Ω</text>
+<line x1="700" y1="925" x2="788" y2="925" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="700" y1="925" x2="700" y2="937" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="687" y1="937" x2="713" y2="937" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="691.5" y1="942" x2="708.5" y2="942" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="696" y1="947" x2="704" y2="947" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="788" y="866" width="24" height="73" rx="3" fill="#fff" stroke="#1d1b2e" stroke-width="2"/>
+<circle cx="800" cy="880" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="884" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<circle cx="800" cy="925" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="800" y="929" font-size="1" fill="#1d1b2e" text-anchor="start" font-weight="400" ></text>
+<text x="800" y="858" font-size="13" fill="#1d1b2e" text-anchor="middle" font-weight="800" paint-order="stroke" stroke="#ffffff" stroke-width="5">J9</text>
+<line x1="812" y1="880" x2="960" y2="880" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="812" y1="925" x2="960" y2="925" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="960" y1="880" x2="960" y2="892.5" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="960" y1="912.5" x2="960" y2="925" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<polygon points="949,892.5 971,892.5 960,911.5" fill="#ef8fa0" stroke="#1d1b2e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="948" y1="912.5" x2="972" y2="912.5" stroke="#1d1b2e" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="976" y1="898.5" x2="989" y2="889.5" stroke="#1d1b2e" stroke-width="1.6" stroke-linecap="round"/>
+<polygon points="989,889.5 982,890.5 987,895.5" fill="#1d1b2e" stroke="#1d1b2e" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="976" y1="908.5" x2="989" y2="899.5" stroke="#1d1b2e" stroke-width="1.6" stroke-linecap="round"/>
+<polygon points="989,899.5 982,900.5 987,905.5" fill="#1d1b2e" stroke="#1d1b2e" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1000" y="898" font-size="15" fill="#1d1b2e" text-anchor="start" font-weight="700" >LED2 · Luz del botón</text>
+<text x="1000" y="918" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >opcional</text>
+<text x="1255" y="140" font-size="15" fill="#7b4fd6" text-anchor="start" font-weight="800" >TABLA DE CONEXIONES</text>
+<rect x="1247" y="152" width="436" height="30" rx="6" fill="#1d1b2e"/>
+<text x="1255" y="172" font-size="14" fill="#ffffff" text-anchor="start" font-weight="700" >Pin</text>
+<text x="1317" y="172" font-size="14" fill="#ffffff" text-anchor="start" font-weight="700" >Componente</text>
+<text x="1555" y="172" font-size="13" fill="#ffffff" text-anchor="start" font-weight="700" >Conexión</text>
+<text x="1255" y="204" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="700" >A0</text>
+<text x="1317" y="204" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="400" >Slider 10 kΩ (RV1)</text>
+<text x="1555" y="204" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >cursor</text>
+<rect x="1247" y="216" width="436" height="30" rx="6" fill="#f5f3fa"/>
+<text x="1255" y="236" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="700" >A1</text>
+<text x="1317" y="236" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="400" >Perilla 10 kΩ (RV2)</text>
+<text x="1555" y="236" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >pata central</text>
+<text x="1255" y="268" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="700" >D2</text>
+<text x="1317" y="268" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="400" >Botón (SW1)</text>
+<text x="1555" y="268" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >a GND · pull-up</text>
+<rect x="1247" y="280" width="436" height="30" rx="6" fill="#f5f3fa"/>
+<text x="1255" y="300" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="700" >D6 ~</text>
+<text x="1317" y="300" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="400" >LED sol + R1 220 Ω</text>
+<text x="1555" y="300" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >ánodo vía R1</text>
+<text x="1255" y="332" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="700" >D9 ~</text>
+<text x="1317" y="332" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="400" >LED botón + R2 220 Ω</text>
+<text x="1555" y="332" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >opcional</text>
+<rect x="1247" y="344" width="436" height="30" rx="6" fill="#f5f3fa"/>
+<text x="1255" y="364" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="700" >5V</text>
+<text x="1317" y="364" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="400" >riel +5V del shield</text>
+<text x="1555" y="364" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >RV1, RV2</text>
+<text x="1255" y="396" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="700" >GND</text>
+<text x="1317" y="396" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="400" >riel GND del shield</text>
+<text x="1555" y="396" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >todo</text>
+<rect x="1247" y="408" width="436" height="30" rx="6" fill="#f5f3fa"/>
+<text x="1255" y="428" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="700" >USB</text>
+<text x="1317" y="428" font-size="14" fill="#1d1b2e" text-anchor="start" font-weight="400" >PC (Chrome)</text>
+<text x="1555" y="428" font-size="13" fill="#6b6880" text-anchor="start" font-weight="400" >Serial 115200</text>
+<text x="1255" y="484" font-size="15" fill="#7b4fd6" text-anchor="start" font-weight="800" >NOTAS</text>
+<text x="1255" y="510" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >• R1 y R2 van soldadas en el shield.</text>
+<text x="1255" y="531" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >• Slider, perilla, botón y LEDs viven en la tapa</text>
+<text x="1255" y="552" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >  y se enchufan al shield con conectores J5–J9,</text>
+<text x="1255" y="573" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >  así el Arduino se desmonta sin desoldar nada.</text>
+<text x="1255" y="594" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >• Todas las tierras se unen en el riel GND.</text>
+<text x="1255" y="615" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >• El botón usa el pull-up interno del Arduino:</text>
+<text x="1255" y="636" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >  suelto = 1 (HIGH), presionado = 0 (LOW).</text>
+<text x="1255" y="657" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >• D6 y D9 son PWM (~): permiten dimerizar</text>
+<text x="1255" y="678" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >  el sol y la luz del botón.</text>
+<text x="1255" y="725" font-size="15" fill="#7b4fd6" text-anchor="start" font-weight="800" >SIMBOLOGÍA</text>
+<line x1="1269" y1="777" x2="1269" y2="763" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1259" y1="763" x2="1279" y2="763" stroke="#1d1b2e" stroke-width="2.6" stroke-linecap="round"/>
+<text x="1269" y="756" font-size="13" fill="#7b4fd6" text-anchor="middle" font-weight="700" >+5V</text>
+<text x="1289" y="767" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >+5V</text>
+<line x1="1365" y1="753" x2="1365" y2="765" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1352" y1="765" x2="1378" y2="765" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1356.5" y1="770" x2="1373.5" y2="770" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="1361" y1="775" x2="1369" y2="775" stroke="#1d1b2e" stroke-width="2.2" stroke-linecap="round"/>
+<text x="1387" y="771" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >GND</text>
+<rect x="1451" y="751" width="10" height="10" fill="#2b2b2b"/>
+<text x="1469" y="761" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >header</text>
+<circle cx="1545" cy="756" r="4" fill="#fff" stroke="#1d1b2e" stroke-width="1.8"/>
+<text x="1555" y="761" font-size="13" fill="#1d1b2e" text-anchor="start" font-weight="400" >pin conector</text>
+</svg>
