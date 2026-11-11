@@ -4,22 +4,14 @@
 Un slider, una perilla y un botón arcade, montados en una caja impresa en 3D, controlan un puzzle de bloques pixelado que corre en el navegador. A medida que subes de nivel, el sol del juego se va poniendo… y el sol de la caja también.
 
 > Proyecto para **Diseño de Controlador Físico · Unidad 2 · Universidad Adolfo Ibáñez**
-> Autora: **[Tu nombre]** · 2026
+> Autora: **[antonia aracena]** · 2026
 
-<p align="center">
-  <img src="docs/juego_titulo.png" width="45%" alt="Pantalla de inicio de Sunset Blocks">
-  &nbsp;
-  <img src="docs/juego_partida.png" width="45%" alt="Partida en curso con el panel del controlador en vivo">
-</p>
-
----
 
 ## 🎬 Video
 
 [![Ver el video del proyecto](docs/juego_partida.png)](https://youtu.be/TU_VIDEO_AQUI)
 
-> 👉 Reemplaza `https://youtu.be/TU_VIDEO_AQUI` por el link de tu video (YouTube, Vimeo o Google Drive).
-
+> 👉 Reemplaza `https://www.youtube.com/shorts/JC0CRTiaetk´
 ---
 
 ## 📑 Contenido
@@ -98,15 +90,6 @@ La estética toma el **atardecer** como hilo conductor: el cielo del juego pasa 
 
 ---
 
-## 🗺️ Diagrama esquemático del shield
-
-![Diagrama esquemático del shield](docs/esquema_sunset_blocks.png)
-
-- Las resistencias R1 y R2 van **soldadas en el shield**.
-- Todos los controles viven en la tapa y se conectan al shield con **conectores (J5–J9)**, así el Arduino se **desmonta sin desoldar nada**.
-- Versión vectorial editable: [`docs/esquema_sunset_blocks.svg`](docs/esquema_sunset_blocks.svg)
-
----
 
 ## 📦 Carcasa
 
