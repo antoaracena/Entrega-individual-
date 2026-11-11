@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Escucha & Relaciona</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+
+      background:
+        radial-gradient(circle at top left, #ffe9a8, transparent 35%),
+        radial-gradient(circle at bottom right, #b8e8ff, transparent 35%),
+        linear-gradient(135deg, #f6f4ff, #fff9f2);
+
+      color: #222;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 1050px;
+      min-height: 680px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 32px;
+      padding: 38px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contenido {
+      position: relative;
+      z-index: 2;
+    }
+
+    .circulo {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.35;
+      z-index: 0;
+    }
+
+    .circulo1 {
+      width: 190px;
+      height: 190px;
+      background: #ffd166;
+      top: -70px;
+      right: -50px;
+    }
+
+    .circulo2 {
+      width: 160px;
+      height: 160px;
+      background: #8ed8ff;
+      bottom: -60px;
+      left: -50px;
+    }
+
+    .pantalla {
+      display: none;
+    }
+
+    .pantalla.activa {
+      display: block;
+      animation: aparecer 0.4s ease;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    /* =========================
+       INICIO
+    ========================== */
+
+    .inicio {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .icono-inicio {
+      font-size: 95px;
+      margin-bottom: 15px;
+      animation: flotar 3s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .inicio h1 {
+      font-size: 56px;
+      color: #25245c;
+      margin-bottom: 12px;
+    }
+
+    .inicio h2 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .inicio p {
+      max-width: 600px;
+      margin: 0 auto 35px;
+      line-height: 1.7;
+      color: #666;
+      font-size: 17px;
+    }
+
+
+    /* =========================
+       BOTONES
+    ========================== */
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .boton-principal {
+      border: none;
+      background: #25245c;
+      color: white;
+      padding: 17px 38px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: 0.25s;
+    }
+
+    .boton-principal:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(37, 36, 92, 0.25);
+    }
+
+
+    /* =========================
+       BARRA SUPERIOR
+    ========================== */
+
+    .barra-superior {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .contador,
+    .puntaje {
+      background: #f4f4f8;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+    }
+
+
+    /* =========================
+       PROGRESO
+    ========================== */
+
+    .progreso-contenedor {
+      width: 100%;
+      height: 11px;
+      background: #ececf3;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 35px;
+    }
+
+    .progreso {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #6c63ff, #55c2ff);
+      border-radius: 20px;
+      transition: width 0.4s ease;
+    }
+
+
+    /* =========================
+       PREGUNTA
+    ========================== */
+
+    .pregunta {
+      text-align: center;
+    }
+
+    .pregunta h2 {
+      font-size: 34px;
+      color: #25245c;
+      margin-bottom: 8px;
+    }
+
+    .subtitulo {
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       AUDIO
+    ========================== */
+
+    .audio-box {
+      background: linear-gradient(135deg, #fff4d6, #fff);
+      border: 2px solid #ffe39a;
+      max-width: 430px;
+      margin: 0 auto 35px;
+      padding: 25px;
+      border-radius: 25px;
+    }
+
+    .boton-audio {
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      border: none;
+      background: #ffd166;
+      font-size: 40px;
+      transition: 0.25s;
+      box-shadow: 0 10px 25px rgba(255, 209, 102, 0.35);
+    }
+
+    .boton-audio:hover {
+      transform: scale(1.08);
+    }
+
+    .boton-audio.reproduciendo {
+      animation: pulso 1s infinite;
+    }
+
+    @keyframes pulso {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 209, 102, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 22px rgba(255, 209, 102, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 209, 102, 0);
+      }
+    }
+
+    .audio-box p {
+      margin-top: 14px;
+      color: #555;
+      font-weight: bold;
+    }
+
+
+    /* =========================
+       IMÁGENES
+    ========================== */
+
+    .opciones {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .opcion {
+      border: 4px solid transparent;
+      background: #fff;
+      border-radius: 22px;
+      padding: 7px;
+      overflow: hidden;
+      transition: 0.25s;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .opcion:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+      border-color: #aaa6ff;
+    }
+
+    .opcion img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    .opcion.correcta {
+      border-color: #22c55e;
+      background: #dcfce7;
+      transform: scale(1.02);
+    }
+
+    .opcion.incorrecta {
+      border-color: #ef4444;
+      background: #fee2e2;
+    }
+
+    .opcion:disabled {
+      cursor: default;
+    }
+
+
+    /* =========================
+       FEEDBACK
+    ========================== */
+
+    .feedback {
+      min-height: 95px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .feedback h3 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .feedback p {
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .correcto-texto {
+      color: #159447;
+    }
+
+    .incorrecto-texto {
+      color: #d63636;
+    }
+
+    #siguiente {
+      display: none;
+      margin: 15px auto 0;
+    }
+
+
+    /* =========================
+       FINAL
+    ========================== */
+
+    .final {
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .final-icono {
+      font-size: 95px;
+      margin-bottom: 10px;
+    }
+
+    .final h1 {
+      color: #25245c;
+      font-size: 46px;
+      margin-bottom: 15px;
+    }
+
+    .resultado-numero {
+      font-size: 62px;
+      font-weight: bold;
+      color: #6c63ff;
+      margin: 25px 0 10px;
+    }
+
+    .mensaje-final {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 35px;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 850px) {
+
+      .opciones {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 550px) {
+
+      body {
+        padding: 12px;
+      }
+
+      .app {
+        padding: 20px;
+      }
+
+      .inicio h1 {
+        font-size: 40px;
+      }
+
+      .pregunta h2 {
+        font-size: 27px;
+      }
+
+      .opcion img {
+        height: 140px;
+      }
+
+      .barra-superior {
+        font-size: 14px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <main class="app">
+
+    <div class="circulo circulo1"></div>
+    <div class="circulo circulo2"></div>
+
+    <div class="contenido">
+
+
+      <!-- =========================
+           PANTALLA DE INICIO
+      ========================== -->
+
+      <section
+        id="pantallaInicio"
+        class="pantalla activa inicio"
+      >
+
+        <div class="icono-inicio">
+          🎧
+        </div>
+
+        <h1>
+          Escucha & Relaciona
+        </h1>
+
+        <h2>
+          ¿Puedes reconocer el sonido?
+        </h2>
+
+        <p>
+          Escucha diferentes sonidos cotidianos y selecciona
+          la imagen que corresponde a cada uno.
+          Pon a prueba tu percepción auditiva.
+        </p>
+
+        <button
+          class="boton-principal"
+          onclick="comenzarJuego()"
+        >
+          COMENZAR
+        </button>
+
+      </section>
+
+
+
+      <!-- =========================
+           PANTALLA DEL JUEGO
+      ========================== -->
+
+      <section
+        id="pantallaJuego"
+        class="pantalla"
+      >
+
+        <div class="barra-superior">
+
+          <div class="contador">
+
+            Pregunta
+
+            <span id="numeroPregunta">
+              1
+            </span>
+
+            /
+
+            <span id="totalPreguntas">
+              8
+            </span>
+
+          </div>
+
+          <div class="puntaje">
+
+            ⭐
+
+            <span id="puntaje">
+              0
+            </span>
+
+            puntos
+
+          </div>
+
+        </div>
+
+
+        <div class="progreso-contenedor">
+
+          <div
+            id="barraProgreso"
+            class="progreso"
+          ></div>
+
+        </div>
+
+
+        <div class="pregunta">
+
+          <h2>
+            ¿Qué imagen corresponde al sonido?
+          </h2>
+
+          <p class="subtitulo">
+            Escucha atentamente y selecciona una fotografía.
+          </p>
+
+
+          <div class="audio-box">
+
+            <button
+              id="botonAudio"
+              class="boton-audio"
+              onclick="reproducirAudio()"
+            >
+              🔊
+            </button>
+
+            <p>
+              ESCUCHAR SONIDO
+            </p>
+
+          </div>
+
+
+          <div
+            id="opciones"
+            class="opciones"
+          ></div>
+
+
+          <div
+            id="feedback"
+            class="feedback"
+          ></div>
+
+
+          <button
+            id="siguiente"
+            class="boton-principal"
+            onclick="siguientePregunta()"
+          >
+            SIGUIENTE →
+          </button>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =========================
+           PANTALLA FINAL
+      ========================== -->
+
+      <section
+        id="pantallaFinal"
+        class="pantalla final"
+      >
+
+        <div class="final-icono">
+          🏆
+        </div>
+
+        <h1>
+          ¡Juego terminado!
+        </h1>
+
+        <p>
+          Tu resultado fue:
+        </p>
+
+        <div
+          id="resultadoFinal"
+          class="resultado-numero"
+        >
+          0 / 8
+        </div>
+
+        <p
+          id="mensajeFinal"
+          class="mensaje-final"
+        ></p>
+
+        <button
+          class="boton-principal"
+          onclick="reiniciarJuego()"
+        >
+          JUGAR DE NUEVO
+        </button>
+
+      </section>
+
+
+    </div>
+
+  </main>
+
+
+  <script>
+
+    /* =========================
+       PREGUNTAS
+    ========================== */
+
+    const preguntas = [
+
+      {
+        nombre: "Agua",
+        audio: "audio/agua.mp3",
+        respuesta: "agua",
+
+        opciones: [
+          {
+            id: "agua",
+            imagen: "imagenes/agua.jpg"
+          },
+          {
+            id: "tetera",
+            imagen: "imagenes/tetera.jpg"
+          },
+          {
+            id: "taza",
+            imagen: "imagenes/taza.jpg"
+          },
+          {
+            id: "llaves",
+            imagen: "imagenes/llaves.jpg"
+          }
+        ]
+      },
+
+
+      {
+        nombre: "Llaves",
+        audio: "audio/llaves.mp3",
+        respuesta: "llaves",
+
+        opciones: [
+          {
+            id: "tijeras",
+            imagen: "imagenes/tijeras.jpg"
+          },
+          {
+            id: "llaves",
+            imagen: "imagenes/llaves.jpg"
+          },
+          {
+            id: "teclado",
+            imagen: "imagenes/teclado.jpg"
+          },
+          {
+            id: "papel",
+            imagen: "imagenes/papel.jpg"
+          }
+        ]
+      },
+
+
+      {
+        nombre: "Papel",
+        audio: "audio/papel.mp3",
+        respuesta: "papel",
+
+        opciones: [
+          {
+            id: "puerta",
+            imagen: "imagenes/puerta.jpg"
+          },
+          {
+            id: "papel",
+            imagen: "imagenes/papel.jpg"
+          },
+          {
+            id: "taza",
+            imagen: "imagenes/taza.jpg"
+          },
+          {
+            id: "tijeras",
+            imagen: "imagenes/tijeras.jpg"
+          }
+        ]
+      },
+
+
+      {
+        nombre: "Puerta",
+        audio: "audio/puerta.mp3",
+        respuesta: "puerta",
+
+        opciones: [
+          {
+            id: "puerta",
+            imagen: "imagenes/puerta.jpg"
+          },
+          {
+            id: "teclado",
+            imagen: "imagenes/teclado.jpg"
+          },
+          {
+            id: "tetera",
+            imagen: "imagenes/tetera.jpg"
+          },
+          {
+            id: "agua",
+            imagen: "imagenes/agua.jpg"
+          }
+        ]
+      },
+
+
+      {
+        nombre: "Taza",
+        audio: "audio/taza.mp3",
+        respuesta: "taza",
+
+        opciones: [
+          {
+            id: "llaves",
+            imagen: "imagenes/llaves.jpg"
+          },
+          {
+            id: "tetera",
+            imagen: "imagenes/tetera.jpg"
+          },
+          {
+            id: "taza",
+            imagen: "imagenes/taza.jpg"
+          },
+          {
+            id: "papel",
+            imagen: "imagenes/papel.jpg"
+          }
+        ]
+      },
+
+
+      {
+        nombre: "Teclado",
+        audio: "audio/teclado.mp3",
+        respuesta: "teclado",
+
+        opciones: [
+          {
+            id: "tijeras",
+            imagen: "imagenes/tijeras.jpg"
+          },
+          {
+            id: "puerta",
+            imagen: "imagenes/puerta.jpg"
+          },
+          {
+            id: "teclado",
+            imagen: "imagenes/teclado.jpg"
+          },
+          {
+            id: "llaves",
+            imagen: "imagenes/llaves.jpg"
+          }
+        ]
+      },
+
+
+      {
+        nombre: "Tetera",
+        audio: "audio/tetera.mp3",
+        respuesta: "tetera",
+
+        opciones: [
+          {
+            id: "taza",
+            imagen: "imagenes/taza.jpg"
+          },
+          {
+            id: "agua",
+            imagen: "imagenes/agua.jpg"
+          },
+          {
+            id: "tetera",
+            imagen: "imagenes/tetera.jpg"
+          },
+          {
+            id: "puerta",
+            imagen: "imagenes/puerta.jpg"
+          }
+        ]
+      },
+
+
+      {
+        nombre: "Tijeras",
+        audio: "audio/tijeras.mp3",
+        respuesta: "tijeras",
+
+        opciones: [
+          {
+            id: "papel",
+            imagen: "imagenes/papel.jpg"
+          },
+          {
+            id: "llaves",
+            imagen: "imagenes/llaves.jpg"
+          },
+          {
+            id: "tijeras",
+            imagen: "imagenes/tijeras.jpg"
+          },
+          {
+            id: "teclado",
+            imagen: "imagenes/teclado.jpg"
+          }
+        ]
+      }
+
+    ];
+
+
+    /* =========================
+       VARIABLES
+    ========================== */
+
+    let preguntaActual = 0;
+    let puntaje = 0;
+    let respondida = false;
+    let audioActual = null;
+
+
+    const pantallaInicio =
+      document.getElementById("pantallaInicio");
+
+    const pantallaJuego =
+      document.getElementById("pantallaJuego");
+
+    const pantallaFinal =
+      document.getElementById("pantallaFinal");
+
+    const opcionesContenedor =
+      document.getElementById("opciones");
+
+    const feedback =
+      document.getElementById("feedback");
+
+    const botonSiguiente =
+      document.getElementById("siguiente");
+
+    const botonAudio =
+      document.getElementById("botonAudio");
+
+
+    document.getElementById(
+      "totalPreguntas"
+    ).textContent = preguntas.length;
+
+
+    /* =========================
+       COMENZAR
+    ========================== */
+
+    function comenzarJuego() {
+
+      preguntaActual = 0;
+      puntaje = 0;
+
+      pantallaInicio.classList.remove("activa");
+      pantallaJuego.classList.add("activa");
+
+      mostrarPregunta();
+
+    }
+
+
+    /* =========================
+       MOSTRAR PREGUNTA
+    ========================== */
+
+    function mostrarPregunta() {
+
+      respondida = false;
+
+      feedback.innerHTML = "";
+
+      botonSiguiente.style.display = "none";
+
+      opcionesContenedor.innerHTML = "";
+
+      botonAudio.classList.remove("reproduciendo");
+
+      const pregunta = preguntas[preguntaActual];
+
+
+      document.getElementById(
+        "numeroPregunta"
+      ).textContent = preguntaActual + 1;
+
+
+      document.getElementById(
+        "puntaje"
+      ).textContent = puntaje;
+
+
+      const porcentaje =
+        ((preguntaActual + 1) / preguntas.length) * 100;
+
+
+      document.getElementById(
+        "barraProgreso"
+      ).style.width = porcentaje + "%";
+
+
+      pregunta.opciones.forEach(opcion => {
+
+        const boton =
+          document.createElement("button");
+
+        boton.classList.add("opcion");
+
+        boton.innerHTML = `
+
+          <img
+            src="${opcion.imagen}"
+            alt="Opción visual"
+          >
+
+        `;
+
+
+        boton.addEventListener(
+          "click",
+          function () {
+
+            comprobarRespuesta(
+              opcion.id,
+              boton
+            );
+
+          }
+        );
+
+
+        opcionesContenedor.appendChild(boton);
+
+      });
+
+    }
+
+
+    /* =========================
+       REPRODUCIR AUDIO
+    ========================== */
+
+    function reproducirAudio() {
+
+      const pregunta = preguntas[preguntaActual];
+
+
+      if (audioActual) {
+
+        audioActual.pause();
+        audioActual.currentTime = 0;
+
+      }
+
+
+      audioActual =
+        new Audio(pregunta.audio);
+
+
+      botonAudio.classList.add(
+        "reproduciendo"
+      );
+
+
+      audioActual.play()
+        .catch(error => {
+
+          console.log(error);
+
+          alert(
+            "No se encontró el archivo de audio. Revisa que esté dentro de la carpeta audio."
+          );
+
+        });
+
+
+      audioActual.onended =
+        function () {
+
+          botonAudio.classList.remove(
+            "reproduciendo"
+          );
+
+        };
+
+    }
+
+
+    /* =========================
+       FEEDBACK SONORO
+    ========================== */
+
+    function sonidoCorrecto() {
+
+      const contexto =
+        new (
+          window.AudioContext ||
+          window.webkitAudioContext
+        )();
+
+
+      const oscilador =
+        contexto.createOscillator();
+
+      const volumen =
+        contexto.createGain();
+
+
+      oscilador.connect(volumen);
+      volumen.connect(contexto.destination);
+
+
+      oscilador.type = "sine";
+
+      oscilador.frequency.value = 620;
+
+      volumen.gain.value = 0.12;
+
+      oscilador.start();
+
+
+      setTimeout(() => {
+
+        oscilador.frequency.value = 820;
+
+      }, 120);
+
+
+      setTimeout(() => {
+
+        oscilador.stop();
+        contexto.close();
+
+      }, 280);
+
+    }
+
+
+    function sonidoIncorrecto() {
+
+      const contexto =
+        new (
+          window.AudioContext ||
+          window.webkitAudioContext
+        )();
+
+
+      const oscilador =
+        contexto.createOscillator();
+
+      const volumen =
+        contexto.createGain();
+
+
+      oscilador.connect(volumen);
+      volumen.connect(contexto.destination);
+
+
+      oscilador.type = "sine";
+
+      oscilador.frequency.value = 220;
+
+      volumen.gain.value = 0.1;
+
+      oscilador.start();
+
+
+      setTimeout(() => {
+
+        oscilador.frequency.value = 150;
+
+      }, 150);
+
+
+      setTimeout(() => {
+
+        oscilador.stop();
+        contexto.close();
+
+      }, 330);
+
+    }
+
+
+    /* =========================
+       COMPROBAR RESPUESTA
+    ========================== */
+
+    function comprobarRespuesta(
+      respuestaUsuario,
+      botonSeleccionado
+    ) {
+
+      if (respondida) {
+        return;
+      }
+
+
+      respondida = true;
+
+
+      const pregunta =
+        preguntas[preguntaActual];
+
+
+      const botones =
+        document.querySelectorAll(".opcion");
+
+
+      botones.forEach(boton => {
+
+        boton.disabled = true;
+
+      });
+
+
+      if (
+        respuestaUsuario ===
+        pregunta.respuesta
+      ) {
+
+        puntaje++;
+
+        botonSeleccionado.classList.add(
+          "correcta"
+        );
+
+
+        feedback.innerHTML = `
+
+          <h3 class="correcto-texto">
+            ✓ ¡Correcto!
+          </h3>
+
+          <p>
+            El sonido correspondía a
+            <strong>${pregunta.nombre}</strong>.
+          </p>
+
+        `;
+
+
+        sonidoCorrecto();
+
+      }
+
+      else {
+
+        botonSeleccionado.classList.add(
+          "incorrecta"
+        );
+
+
+        botones.forEach((boton, indice) => {
+
+          const opcion =
+            pregunta.opciones[indice];
+
+
+          if (
+            opcion.id ===
+            pregunta.respuesta
+          ) {
+
+            boton.classList.add(
+              "correcta"
+            );
+
+          }
+
+        });
+
+
+        feedback.innerHTML = `
+
+          <h3 class="incorrecto-texto">
+            ✕ Incorrecto
+          </h3>
+
+          <p>
+            La imagen correcta correspondía a
+            <strong>${pregunta.nombre}</strong>.
+          </p>
+
+        `;
+
+
+        sonidoIncorrecto();
+
+      }
+
+
+      document.getElementById(
+        "puntaje"
+      ).textContent = puntaje;
+
+
+      botonSiguiente.style.display =
+        "block";
+
+    }
+
+
+    /* =========================
+       SIGUIENTE
+    ========================== */
+
+    function siguientePregunta() {
+
+      if (audioActual) {
+
+        audioActual.pause();
+        audioActual.currentTime = 0;
+
+      }
+
+
+      preguntaActual++;
+
+
+      if (
+        preguntaActual <
+        preguntas.length
+      ) {
+
+        mostrarPregunta();
+
+      }
+
+      else {
+
+        mostrarFinal();
+
+      }
+
+    }
+
+
+    /* =========================
+       RESULTADO FINAL
+    ========================== */
+
+    function mostrarFinal() {
+
+      pantallaJuego.classList.remove(
+        "activa"
+      );
+
+      pantallaFinal.classList.add(
+        "activa"
+      );
+
+
+      document.getElementById(
+        "resultadoFinal"
+      ).textContent =
+        puntaje + " / " + preguntas.length;
+
+
+      let mensaje = "";
+
+
+      if (
+        puntaje === preguntas.length
+      ) {
+
+        mensaje =
+          "🎧 ¡Excelente! Relacionaste todos los sonidos con sus imágenes.";
+
+      }
+
+      else if (
+        puntaje >= 6
+      ) {
+
+        mensaje =
+          "🔊 ¡Muy bien! Tienes una gran percepción auditiva.";
+
+      }
+
+      else if (
+        puntaje >= 4
+      ) {
+
+        mensaje =
+          "👂 ¡Buen trabajo! Sigue entrenando tu oído.";
+
+      }
+
+      else {
+
+        mensaje =
+          "🎵 Sigue escuchando atentamente y vuelve a intentarlo.";
+
+      }
+
+
+      document.getElementById(
+        "mensajeFinal"
+      ).textContent = mensaje;
+
+    }
+
+
+    /* =========================
+       REINICIAR
+    ========================== */
+
+    function reiniciarJuego() {
+
+      pantallaFinal.classList.remove(
+        "activa"
+      );
+
+      pantallaInicio.classList.add(
+        "activa"
+      );
+
+      preguntaActual = 0;
+      puntaje = 0;
+
+    }
+
+  </script>
+
+</body>
+
+</html>
